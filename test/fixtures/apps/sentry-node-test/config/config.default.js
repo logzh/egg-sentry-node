@@ -4,7 +4,7 @@ module.exports = () => {
   return {
     keys: 'egg-sentry-node',
     sentry: {
-      dns: '',
+      dsn: 'https://xxxx@abc.cn/sentry/1',
     },
   };
 };

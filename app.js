@@ -1,18 +1,8 @@
 'use strict';
-const assert = require('assert');
-const Sentry = require('@sentry/node');
 
 module.exports = app => {
 
-  app.addSingleton('Sentry', (config, app) => {
-    assert(app.config.sentry.dsn, '[egg-sentry-node] should pass options.dsn');
-
-    const options = Object.assign({ environment: app.config.env }, app.config.sentry);
-
-    Sentry.init(options);
-
-    return Sentry;
-  });
+  require('./lib/index')(app);
 
   app.on('error', (err, ctx) => {
     ctx = ctx || app.createAnonymousContext();

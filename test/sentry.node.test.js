@@ -16,6 +16,7 @@ describe('test/assets.test.js', () => {
   afterEach(mock.restore);
 
   it('should GET /', () => {
+    console.log(app.Sentry);
     return app.httpRequest()
       .get('/')
       .expect('hi')
