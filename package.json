@@ -1,6 +1,6 @@
 {
   "name": "egg-sentry-node",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "sentry node plugin for eggjs（@sentry/node，eggjs插件）",
   "eggPlugin": {
     "name": "sentry"
